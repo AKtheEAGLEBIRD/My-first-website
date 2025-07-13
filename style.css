@@ -1,0 +1,196 @@
+/* || IMPORT FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* || RESET DEFAULT */
+* {
+    margin: 0;
+}
+
+/* || INITIAL DEFINITIONS */
+:root {
+    --HEADING-FF: 'Playfair Display', serif;
+    --BODY-FF: 'Open Sans', sans-serif;
+    --BG-COLOR: #FFF8F0;
+    --PRIMARY-COLOR: #8B0000;
+    --ACCENT-COLOR: #FFD700;
+}
+
+/* || INITIAL SETTIGS */
+body {
+    background-color: var(--BG-COLOR);
+    color: var(--PRIMARY-COLOR);
+    font-family: var(--BODY-FF);
+    text-align: center;
+    /* display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 200px; */
+}
+
+h1 {
+    color: var(--PRIMARY-COLOR);
+    font-family: var(--HEADING-FF);
+    font-size: 40px;
+}
+
+h2 {
+    color: var(--PRIMARY-COLOR);
+    font-family: var(--HEADING-FF);
+    text-decoration: 0.2em underline dotted;
+    text-underline-offset: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-size: 24px;
+}
+
+main {
+    text-align: center;
+    padding: 5rem 5rem;
+}
+
+.dishes {
+    margin-top: 5rem;
+}
+
+/* || HEADER STYLES */
+header {
+    background-color: var(--ACCENT-COLOR);
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+header img {
+    height: 30rem;
+    width: 50rem;
+    border-radius: 5rem;
+}
+
+.box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*  || MENU BUTTON STYLES */
+.menu {
+    text-decoration: none;
+    color: var(--PRIMARY-COLOR);
+    border: 1px solid var(--PRIMARY-COLOR);
+    font-size: x-large;
+    border-radius: 50%;
+    padding: 0.5rem 0.8rem;
+    width: 20rem;
+}
+
+.menu:hover {
+    background-color: var(--PRIMARY-COLOR);
+    color: var(--BG-COLOR);
+}
+
+.menu:focus, .menu:active {
+    background-color: var(--PRIMARY-COLOR);
+    color: var(--BG-COLOR);
+    outline: 3px dashed var(--PRIMARY-COLOR);
+    outline-offset: 0.5rem;
+}
+
+/* || FOOTER STYLES */
+footer {
+    background-color: var(--ACCENT-COLOR);
+    padding: 5rem 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--PRIMARY-COLOR);
+}
+
+footer p {
+    margin-bottom: 1rem;
+}
+
+footer address {
+    font-size: 1.5rem;
+}
+
+/* || DISHES MENU STYLES */
+.base {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 5rem;
+    margin-top: 2rem;
+}
+
+.dish {
+    display: flex;
+    border-radius: 20%;
+    height: 40rem;
+    width: 40rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.dish:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 10px var(--ACCENT-COLOR);
+}
+
+.dish p {
+    height: 3rem;
+    width: 25rem;
+    padding: 0.5rem 0;
+    background-color: var(--ACCENT-COLOR);
+    border-radius: 30%;
+    transform: rotateZ(-10deg);
+}
+
+.one {
+    background-image: url(images/butter-chicken.png);
+}
+
+.two {
+    background-image: url(images/panneer-tikka.png);
+}
+
+.three {
+    background-image: url(images/vegbriyani.png);
+}
+
+/* || RESPONSIVE OVER DEVICES SETTINGS*/
+@media (max-width:850px) {
+    header img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+}
+
+@media (max-width:468px) {
+    .dish {
+        height: 15rem;
+        width: 15rem;
+    }
+    .dish p {
+        transform: translateY(12rem);
+    }
+    
+    header {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    header img {
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .box p {
+        padding: 5rem 0.5rem;
+    }
+}
